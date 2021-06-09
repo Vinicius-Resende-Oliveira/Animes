@@ -6,9 +6,9 @@ namespace Animes.Interfaces
     {
          List<T> Lista();
          T RetornaPorID(int id);
-         void Insere(T entidade);
+         void Insere(T objeto);
          void Excluir(int id);
-         void Atualizar(int id, T entidade);
+         void Atualizar(int id, T objeto);
          int ProximoId();
     }
 }
