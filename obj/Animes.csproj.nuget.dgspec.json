@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\C#\\Estudos\\Projetos\\Animes\\Animes.csproj": {}
+    "G:\\C#\\Estudos\\Projetos\\animes\\Animes.csproj": {}
   },
   "projects": {
-    "G:\\C#\\Estudos\\Projetos\\Animes\\Animes.csproj": {
+    "G:\\C#\\Estudos\\Projetos\\animes\\Animes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\C#\\Estudos\\Projetos\\Animes\\Animes.csproj",
+        "projectUniqueName": "G:\\C#\\Estudos\\Projetos\\animes\\Animes.csproj",
         "projectName": "Animes",
-        "projectPath": "G:\\C#\\Estudos\\Projetos\\Animes\\Animes.csproj",
+        "projectPath": "G:\\C#\\Estudos\\Projetos\\animes\\Animes.csproj",
         "packagesPath": "C:\\Users\\vinic\\.nuget\\packages\\",
-        "outputPath": "G:\\C#\\Estudos\\Projetos\\Animes\\obj\\",
+        "outputPath": "G:\\C#\\Estudos\\Projetos\\animes\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
