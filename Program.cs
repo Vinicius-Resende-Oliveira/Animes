@@ -102,14 +102,14 @@ namespace Animes
             repositorioAnime.Insere(novoAnime);
         }
 
-        private static void ListaMovie()
+        private static void ListaAnime()
         {
-            Console.WriteLine("Listar Animes");
-            var lista = repositorioMovie.Lista();
+            Console.WriteLine("Listar Anime");
+            var lista = repositorioAnime.Lista();
 
             if (lista.Count == 0)
             {
-                Console.WriteLine("Nenhum anme cadastrado");
+                Console.WriteLine("Nenhum anime cadastrado");
                 return;
             }
             foreach (var anime in lista)
@@ -122,26 +122,26 @@ namespace Animes
         }
         private static void VisualizaMovie()
         {
-            Console.WriteLine("Digite o ID do anime:");
+            Console.WriteLine("Digite o ID do filme:");
             int indiceAnime = int.Parse(Console.ReadLine());
 
-            var anime = repositorioMovie.RetornaPorID(indiceAnime);
+            var movie = repositorioMovie.RetornaPorID(indiceAnime);
 
-            Console.WriteLine(anime);
+            Console.WriteLine(movie);
         }
 
         private static void ExcluiMovie()
         {
-            Console.WriteLine("Digite o ID do Anime");
-            int indiceAnime = int.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o ID do filme");
+            int indiceMovie = int.Parse(Console.ReadLine());
 
-            repositorioMovie.Excluir(indiceAnime);
+            repositorioMovie.Excluir(indiceMovie);
         }
 
         private static void AtualizaMovie()
         {
-            Console.WriteLine("Digite o ID do anime");
-            int indiceAnime = int.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o ID do filme");
+            int indiceMovie = int.Parse(Console.ReadLine());
 
             foreach (int i in Enum.GetValues(typeof(Genero)))
             {
@@ -150,22 +150,22 @@ namespace Animes
             Console.Write("Digite o gênero entre as opções acima: ");
             int entradaGenero = int.Parse(Console.ReadLine());
 
-            Console.Write("Digite o Titulo do Anime: ");
+            Console.Write("Digite o Titulo do filme: ");
             string entradaTitulo = Console.ReadLine();
             
-            Console.Write("Digite o Ano do Anime: ");
+            Console.Write("Digite o Ano do filme: ");
             int entradaAno = int.Parse(Console.ReadLine());
             
-            Console.Write("Digite a Descricao do Anime: ");
+            Console.Write("Digite a Descricao do filme: ");
             string entradaDescricao = Console.ReadLine();
             
-            Movies novoAnime = new Movies(id: indiceAnime, genero: (Genero)entradaGenero, titulo: entradaTitulo, ano: entradaAno, descricao: entradaDescricao);
-            repositorioMovie.Atualizar(indiceAnime, novoAnime);
+            Movies novoMovie = new Movies(id: indiceMovie, genero: (Genero)entradaGenero, titulo: entradaTitulo, ano: entradaAno, descricao: entradaDescricao);
+            repositorioMovie.Atualizar(indiceMovie, novoMovie);
         }
 
         private static void InserirMovie()
         {
-            Console.WriteLine("Inserir novo Anime");
+            Console.WriteLine("Inserir novo filme");
             foreach (int i in Enum.GetValues(typeof(Genero)))
             {
                 Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Genero), i));
@@ -173,59 +173,59 @@ namespace Animes
             Console.Write("Digite o gênero entre as opções acima: ");
             int entradaGenero = int.Parse(Console.ReadLine());
 
-            Console.Write("Digite o Titulo do Anime: ");
+            Console.Write("Digite o Titulo do filme: ");
             string entradaTitulo = Console.ReadLine();
             
-            Console.Write("Digite o Ano do Anime: ");
+            Console.Write("Digite o Ano do filme: ");
             int entradaAno = int.Parse(Console.ReadLine());
             
-            Console.Write("Digite a Descricao do Anime: ");
+            Console.Write("Digite a Descricao do filme: ");
             string entradaDescricao = Console.ReadLine();
             
-            Movies novoAnime = new Movies(id: repositorioMovie.ProximoId(), genero: (Genero)entradaGenero, titulo: entradaTitulo, ano: entradaAno, descricao: entradaDescricao);
-            repositorioMovie.Insere(novoAnime);
+            Movies novoMovie = new Movies(id: repositorioMovie.ProximoId(), genero: (Genero)entradaGenero, titulo: entradaTitulo, ano: entradaAno, descricao: entradaDescricao);
+            repositorioMovie.Insere(novoMovie);
         }
 
-        private static void ListaAnime()
+        private static void ListaMovie()
         {
-            Console.WriteLine("Listar Animes");
+            Console.WriteLine("Listar filme");
             var lista = repositorioMovie.Lista();
 
             if (lista.Count == 0)
             {
-                Console.WriteLine("Nenhum anme cadastrado");
+                Console.WriteLine("Nenhum filme cadastrado");
                 return;
             }
-            foreach (var anime in lista)
+            foreach (var movie in lista)
             {
-                if(!anime.returnExcluido()){
-                    Console.WriteLine("#ID {0} - {1}", anime.returnTitulo(), anime.returnId());
+                if(!movie.returnExcluido()){
+                    Console.WriteLine("#ID {0} - {1}", movie.returnTitulo(), movie.returnId());
                 }
                 
             }
         }
         private static void VisualizaSerie()
         {
-            Console.WriteLine("Digite o ID do anime:");
-            int indiceAnime = int.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o ID da serie:");
+            int indiceSerie = int.Parse(Console.ReadLine());
 
-            var anime = repositorioSerie.RetornaPorID(indiceAnime);
+            var serie = repositorioSerie.RetornaPorID(indiceSerie);
 
-            Console.WriteLine(anime);
+            Console.WriteLine(serie);
         }
 
         private static void ExcluiSerie()
         {
-            Console.WriteLine("Digite o ID do Anime");
-            int indiceAnime = int.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o ID da serie");
+            int indiceSerie = int.Parse(Console.ReadLine());
 
-            repositorioSerie.Excluir(indiceAnime);
+            repositorioSerie.Excluir(indiceSerie);
         }
 
         private static void AtualizaSerie()
         {
-            Console.WriteLine("Digite o ID do anime");
-            int indiceAnime = int.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o ID da serie");
+            int indiceSerie = int.Parse(Console.ReadLine());
 
             foreach (int i in Enum.GetValues(typeof(Genero)))
             {
@@ -234,22 +234,22 @@ namespace Animes
             Console.Write("Digite o gênero entre as opções acima: ");
             int entradaGenero = int.Parse(Console.ReadLine());
 
-            Console.Write("Digite o Titulo do Anime: ");
+            Console.Write("Digite o Titulo do serie: ");
             string entradaTitulo = Console.ReadLine();
             
-            Console.Write("Digite o Ano do Anime: ");
+            Console.Write("Digite o Ano do serie: ");
             int entradaAno = int.Parse(Console.ReadLine());
             
-            Console.Write("Digite a Descricao do Anime: ");
+            Console.Write("Digite a Descricao do serie: ");
             string entradaDescricao = Console.ReadLine();
             
-            Series novoAnime = new Series(id: indiceAnime, genero: (Genero)entradaGenero, titulo: entradaTitulo, ano: entradaAno, descricao: entradaDescricao);
-            repositorioSerie.Atualizar(indiceAnime, novoAnime);
+            Series novoSerie = new Series(id: indiceSerie, genero: (Genero)entradaGenero, titulo: entradaTitulo, ano: entradaAno, descricao: entradaDescricao);
+            repositorioSerie.Atualizar(indiceSerie, novoSerie);
         }
 
         private static void InserirSerie()
         {
-            Console.WriteLine("Inserir novo Anime");
+            Console.WriteLine("Inserir nova serie");
             foreach (int i in Enum.GetValues(typeof(Genero)))
             {
                 Console.WriteLine("{0}-{1}", i, Enum.GetName(typeof(Genero), i));
@@ -257,33 +257,33 @@ namespace Animes
             Console.Write("Digite o gênero entre as opções acima: ");
             int entradaGenero = int.Parse(Console.ReadLine());
 
-            Console.Write("Digite o Titulo do Anime: ");
+            Console.Write("Digite o Titulo do serie: ");
             string entradaTitulo = Console.ReadLine();
             
-            Console.Write("Digite o Ano do Anime: ");
+            Console.Write("Digite o Ano do serie: ");
             int entradaAno = int.Parse(Console.ReadLine());
             
-            Console.Write("Digite a Descricao do Anime: ");
+            Console.Write("Digite a Descricao do serie: ");
             string entradaDescricao = Console.ReadLine();
             
-            Series novoAnime = new Series(id: repositorioSerie.ProximoId(), genero: (Genero)entradaGenero, titulo: entradaTitulo, ano: entradaAno, descricao: entradaDescricao);
-            repositorioSerie.Insere(novoAnime);
+            Series novaSerie = new Series(id: repositorioSerie.ProximoId(), genero: (Genero)entradaGenero, titulo: entradaTitulo, ano: entradaAno, descricao: entradaDescricao);
+            repositorioSerie.Insere(novaSerie);
         }
 
         private static void listaSerie()
         {
-            Console.WriteLine("Listar Animes");
+            Console.WriteLine("Listar Series");
             var lista = repositorioSerie.Lista();
 
             if (lista.Count == 0)
             {
-                Console.WriteLine("Nenhum anme cadastrado");
+                Console.WriteLine("Nenhum serie cadastrado");
                 return;
             }
-            foreach (var anime in lista)
+            foreach (var serie in lista)
             {
-                if(!anime.returnExcluido()){
-                    Console.WriteLine("#ID {0} - {1}", anime.returnTitulo(), anime.returnId());
+                if(!serie.returnExcluido()){
+                    Console.WriteLine("#ID {0} - {1}", serie.returnTitulo(), serie.returnId());
                 }
                 
             }
@@ -398,19 +398,19 @@ namespace Animes
                 switch (opcaoUsuario)
                 {
                     case "1":
-                        ListaAnime();
+                        ListaMovie();
                         break;
                     case "2":
-                        InserirAnime();
+                        InserirMovie();
                         break;
                     case "3":
-                        AtualizaAnime();
+                        AtualizaMovie();
                         break;
                     case "4":
-                        ExcluiAnime();
+                        ExcluiMovie();
                         break;
                     case "5":
-                        VisualizaAnime();
+                        VisualizaMovie();
                         break;
                     case "C":
                         Console.Clear();
